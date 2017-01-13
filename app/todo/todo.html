@@ -1,0 +1,8 @@
+<section class="todo-list">
+  <div [ngClass]="{'flex':true}" class="todo-item" *ngFor="let todo of todoList">
+    <input [ngClass]="['checkbox']" type="checkbox" [checked]="todo.state"/>
+    <span [ngClass]="['red']">{{ todo.title }}</span>
+    <span>{{ todo.date | date: 'medium' }}</span>
+    <button [ngClass]="['delete']" (click)="deleteTodo(todo)">Delete</button>
+  </div>
+</section>
