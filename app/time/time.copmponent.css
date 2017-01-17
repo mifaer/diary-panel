@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.time {
+  /*position: absolute;*/
+  width: 100%;
+  display: flex;
+  text-shadow: 5px 4px 3px #999;
+}
+.timer {
+  opacity: 1;
+  font-size: 500%;
+}
+.main {
+  opacity: 1;
+  font-size: 150%;
+}
+

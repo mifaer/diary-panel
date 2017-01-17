@@ -7,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.css']
 })
 export class AppComponent  {
-  title: string = 'Diary panel for everything...';
+  private num: number = 2;
+  constructor () {
+    this.backRandom(1, 5);
+  }
+  private backRandom(min, max) {
+    this.num = Math.floor(Math.random() * (max - min)) + min;
+  }
 }

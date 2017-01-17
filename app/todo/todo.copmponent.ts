@@ -3,8 +3,8 @@ import { Component } from '@angular/core';
 @Component({
   moduleId: module.id,
   selector: 'my-todo',
-  templateUrl: './todo.html',
-  styleUrls: ['todo.css']
+  templateUrl: 'todo.copmponent.html',
+  styleUrls: ['todo.copmponent.css']
 })
 export class TodoComponent  {
   private todoList: any = [{
