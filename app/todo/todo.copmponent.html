@@ -1,7 +1,8 @@
 <section class="todo-list">
-  <div [ngClass]="{'flex':true}" class="todo-item" *ngFor="let todo of todoList">
-    <input [ngClass]="['checkbox']" type="checkbox" [checked]="todo.state"/>
-    <span [ngClass]="['red']">{{ todo.title }}</span>
+  <div class="todo-item" *ngFor="let todo of todoList">
+    <i class="fa fa-star-o" aria-hidden="true" [ngClass]="{favorite: todo.favorite}" (click)="chooseFavorite(todo); chooseFocusTask.emit(todo.title)"></i>
+    <input type="checkbox" [checked]="todo.state"/>
+    <span class="red">{{ todo.title }}</span>
     <span>{{ todo.date | date: 'medium' }}</span>
     <button [ngClass]="['delete']" (click)="deleteTodo(todo)">Delete</button>
   </div>
